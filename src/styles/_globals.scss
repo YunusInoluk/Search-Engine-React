@@ -1,0 +1,32 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.btn-custom {
+  background-color: $primary-color;
+  color: $white;
+  padding: 0.625rem 1rem;
+  height: 2.875rem;
+  width: 8.63rem;
+  font-weight: bold;
+  font-size: $font-m;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $white;
+  }
+}
+.search-input {
+  height: 2.875rem;
+  margin-right: 1.5rem;
+  padding: 0.625rem 1rem;
+  border: 2px solid $black;
+  border-radius: 0.5rem;
+  font-size: $font-m;
+  font-weight: bold;
+  &:hover {
+    background: rgba(100, 100, 100, 0.08);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+  }
+}

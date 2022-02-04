@@ -1,0 +1,32 @@
+.result-box {
+  height: 250px;
+  overflow: hidden;
+  margin-top: 1.125rem;
+  margin-right: auto;
+  margin-left: 8.6rem;
+  padding: 1rem 2rem;
+  border: 1px solid $text-color;
+  border-radius: 0.5rem;
+  min-width: 690px;
+
+  .result-container {
+    border-bottom: 1px solid #585858;
+    margin-bottom: 1.25rem;
+    .left {
+      .country-city {
+        font-size: $font-m;
+        margin: 0;
+      }
+      .name-date {
+        font-size: $font-xs;
+        color: $light-text-color;
+      }
+    }
+    .right {
+      .email {
+        font-size: $font-m;
+        margin: 0;
+      }
+    }
+  }
+}

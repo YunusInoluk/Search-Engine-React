@@ -1,0 +1,78 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-custom {
+  background-color: #204080;
+  color: #fff;
+  padding: 0.625rem 1rem;
+  height: 2.875rem;
+  width: 8.63rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+}
+
+.btn-custom:hover {
+  background-color: #4f75c2;
+  color: #fff;
+}
+
+.search-input {
+  height: 2.875rem;
+  margin-right: 1.5rem;
+  padding: 0.625rem 1rem;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.search-input:hover {
+  background: rgba(100, 100, 100, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.landing-page .sub-title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-top: 0.65rem;
+  padding-right: 23rem;
+}
+
+.landing-page .result-box {
+  height: 250px;
+  overflow: hidden;
+  margin-top: 1.125rem;
+  margin-right: auto;
+  margin-left: 8.6rem;
+  padding: 1rem 2rem;
+  border: 1px solid #484848;
+  border-radius: 0.5rem;
+  min-width: 690px;
+}
+
+.result-container {
+  border-bottom: 1px solid #585858;
+  margin-bottom: 1.25rem;
+}
+
+.result-container .left .country-city {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.result-container .left .name-date {
+  font-size: 0.75rem;
+  color: #686868;
+}
+
+.result-container .right .email {
+  font-size: 1.125rem;
+  margin: 0;
+}
+/*# sourceMappingURL=custom.css.map */
