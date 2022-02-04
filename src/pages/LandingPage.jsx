@@ -11,6 +11,8 @@ export const LandingPage = () => {
       .then((res) => res.json())
       .then((json) => setDataUser(json));
   }, []);
+
+  // Create data object for search
   const createObject = (arr) => {
     const [nameSurname, company, email, date, country, city] = arr;
     return {
@@ -23,7 +25,9 @@ export const LandingPage = () => {
     };
   };
   const mergedData = dataUser.map(createObject);
-  function searchData(data) {
+
+  // Search filter function
+  const searchData = (data) => {
     return data.filter(
       (item) =>
         item.nameSurname.toLowerCase().indexOf(inputData) > -1 ||
@@ -33,13 +37,13 @@ export const LandingPage = () => {
         item.date.toLowerCase().indexOf(inputData) > -1 ||
         item.city.toLowerCase().indexOf(inputData) > -1
     );
-  }
+  };
   return (
     <div className="landing-page w-100 d-flex flex-column align-items-center ">
       <img className="w-25" src={logo} alt="tesodev logo" />
       <h5 className="sub-title">Search Web App</h5>
       <SearchBar passInputData={setInputData} />
-      <ResultBox data={searchData(mergedData)} />
+      {inputData ? <ResultBox data={searchData(mergedData)} /> : null}
     </div>
   );
 };

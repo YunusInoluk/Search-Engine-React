@@ -44,34 +44,30 @@ body {
   padding-right: 23rem;
 }
 
-.landing-page .result-box {
-  height: 250px;
+.result-box {
   overflow: hidden;
   margin-top: 1.125rem;
-  margin-right: auto;
-  margin-left: 8.6rem;
   padding: 1rem 2rem;
   border: 1px solid #484848;
   border-radius: 0.5rem;
-  min-width: 690px;
 }
 
-.result-container {
+.result-box .result-container {
   border-bottom: 1px solid #585858;
   margin-bottom: 1.25rem;
 }
 
-.result-container .left .country-city {
+.result-box .result-container .left .country-city {
   font-size: 1.125rem;
   margin: 0;
 }
 
-.result-container .left .name-date {
+.result-box .result-container .left .name-date {
   font-size: 0.75rem;
   color: #686868;
 }
 
-.result-container .right .email {
+.result-box .result-container .right .email {
   font-size: 1.125rem;
   margin: 0;
 }

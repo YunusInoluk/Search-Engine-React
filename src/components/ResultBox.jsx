@@ -2,7 +2,7 @@ import React from "react";
 
 export const ResultBox = (props) => {
   return (
-    <div className="result-box">
+    <div className="result-box w-75">
       {props.data.slice(0, 3).map((item, i) => (
         <div
           className="result-container d-flex justify-content-between"
@@ -19,7 +19,7 @@ export const ResultBox = (props) => {
           </div>
         </div>
       ))}
-      <span className="show-more">Show More</span>
+      <span className="show-more d-block text-center">Show More</span>
     </div>
   );
 };
