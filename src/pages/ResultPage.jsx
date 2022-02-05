@@ -1,5 +1,5 @@
 import React from "react";
 
 export const ResultPage = () => {
-  return <div></div>;
+  return <div>Show More</div>;
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const ResultBox = (props) => {
   return (
@@ -19,7 +20,9 @@ export const ResultBox = (props) => {
           </div>
         </div>
       ))}
-      <span className="show-more d-block text-center">Show More</span>
+      <Link to="/show-more">
+        <span className="show-more d-block text-center">Show More</span>
+      </Link>
     </div>
   );
 };
