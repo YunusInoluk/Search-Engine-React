@@ -71,4 +71,24 @@ body {
   font-size: 1.125rem;
   margin: 0;
 }
+
+.result-page .result-context .result-container {
+  border-bottom: 1px solid #585858;
+  margin-bottom: 1.25rem;
+}
+
+.result-page .result-context .result-container .left .country-city {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.result-page .result-context .result-container .left .name-date {
+  font-size: 0.75rem;
+  color: #686868;
+}
+
+.result-page .result-context .result-container .right .email {
+  font-size: 1.125rem;
+  margin: 0;
+}
 /*# sourceMappingURL=custom.css.map */

@@ -51,8 +51,11 @@ function App() {
       <MainContext.Provider value={contextData}>
         <Router>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/show-more" element={<ResultPage />} />
+            <Route exact path="/" element={<LandingPage />} />
+            <Route
+              path="/show-more"
+              element={<ResultPage data={searchData(mergedData)} />}
+            />
           </Routes>
         </Router>
       </MainContext.Provider>
