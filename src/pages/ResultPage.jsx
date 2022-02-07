@@ -43,7 +43,7 @@ export const ResultPage = (props) => {
     <div className="result-page w-100 container pt-5">
       <div className="result-header d-flex align-items-center">
         <Link to="/">
-          <img className="mr-5" src={logo} alt="tesodev logo" />
+          <img className="logo mr-5" src={logo} alt="tesodev logo" />
         </Link>
         <SearchBar />
       </div>
@@ -62,7 +62,8 @@ export const ResultPage = (props) => {
           <option value="year-desc">Year Descending</option>
         </select>
       </div>
-      <div className="result-context mt-5">{displayUsers}</div>
+      <div className="result-context mt-1 mb-5">{displayUsers}</div>
+
       <ReactPaginate
         previousLabel={"Previous"}
         nextLabel={"Next"}
@@ -70,12 +71,12 @@ export const ResultPage = (props) => {
         onPageChange={changePage}
         containerClassName={"pagination"}
         pageClassName={"page-item"}
-        pageLinkClassName={"page-link"}
+        pageLinkClassName={"custom-page-link"}
         activeClassName={"active"}
         previousClassName={"page-item"}
         nextClassName={"page-item"}
-        previousLinkClassName={"page-link"}
-        nextLinkClassName={"page-link"}
+        previousLinkClassName={"custom-prev"}
+        nextLinkClassName={"custom-next"}
         disabledClassName={"disabled"}
       />
     </div>
