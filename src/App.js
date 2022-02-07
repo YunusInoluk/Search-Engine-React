@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 function App() {
   const [inputData, setInputData] = useState("");
   const [dataUser, setDataUser] = useState([]);
+  const [selectedSort, setSelectedSort] = useState("default");
+
   useEffect(() => {
     fetch("http://localhost:3004/data")
       .then((res) => res.json())
@@ -39,11 +41,29 @@ function App() {
         item.city.toLowerCase().indexOf(inputData) > -1
     );
   };
+
+  // Sort filter function
+  const handleDataSort = (data) => {
+    if (selectedSort === "default") {
+      return data;
+    } else if (selectedSort === "name-az") {
+      return data.sort((a, b) => (a.nameSurname > b.nameSurname ? 1 : -1));
+    } else if (selectedSort === "name-za") {
+      return data.sort((a, b) => (a.nameSurname > b.nameSurname ? -1 : 1));
+    } else if (selectedSort === "year-asc") {
+      return data.sort((a, b) => (a.date > b.date ? -1 : 1));
+    } else if (selectedSort === "year-desc") {
+      return data.sort((a, b) => (a.date > b.date ? 1 : -1));
+    }
+  };
+
   const contextData = {
     inputData,
     mergedData,
     setInputData,
     searchData,
+    selectedSort,
+    setSelectedSort,
   };
 
   return (
@@ -54,7 +74,9 @@ function App() {
             <Route exact path="/" element={<LandingPage />} />
             <Route
               path="/show-more"
-              element={<ResultPage data={searchData(mergedData)} />}
+              element={
+                <ResultPage data={handleDataSort(searchData(mergedData))} />
+              }
             />
           </Routes>
         </Router>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MainContext, useContext } from "../context";
 import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
@@ -6,6 +7,7 @@ import { SearchBar } from "../components/SearchBar";
 
 export const ResultPage = (props) => {
   const [pageNumber, setPageNumber] = useState(0);
+  const { setSelectedSort } = useContext(MainContext);
 
   const userPerPage = 6;
   const pageVisited = pageNumber * userPerPage;
@@ -32,9 +34,11 @@ export const ResultPage = (props) => {
     });
 
   const pageCount = Math.ceil(props.data.length / userPerPage);
+
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
+
   return (
     <div className="result-page w-100 container pt-5">
       <div className="result-header d-flex align-items-center">
@@ -42,6 +46,21 @@ export const ResultPage = (props) => {
           <img className="mr-5" src={logo} alt="tesodev logo" />
         </Link>
         <SearchBar />
+      </div>
+      <div className="sorter">
+        <select
+          name="user-sort"
+          id="user-sort"
+          onChange={(e) => setSelectedSort(e.target.value)}
+        >
+          <option value="default" disabled selected>
+            ⇵ Order by
+          </option>
+          <option value="name-az">Name A-Z</option>
+          <option value="name-za">Name Z-A</option>
+          <option value="year-asc">Year Ascending</option>
+          <option value="year-desc">Year Descending</option>
+        </select>
       </div>
       <div className="result-context mt-5">{displayUsers}</div>
       <ReactPaginate

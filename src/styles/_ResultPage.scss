@@ -1,4 +1,23 @@
 .result-page {
+  .sorter {
+    display: flex;
+    justify-content: end;
+    select {
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      text-indent: 1px;
+      text-overflow: "";
+      outline: none;
+      padding: 1rem;
+      font-weight: bold;
+      option {
+        font-weight: bold;
+        font-size: $font-s;
+      }
+    }
+  }
   .result-context {
     .result-container {
       border-bottom: 1px solid #585858;

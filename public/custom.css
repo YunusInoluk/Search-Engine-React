@@ -72,6 +72,32 @@ body {
   margin: 0;
 }
 
+.result-page .sorter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.result-page .sorter select {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  text-indent: 1px;
+  text-overflow: "";
+  outline: none;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.result-page .sorter select option {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
 .result-page .result-context .result-container {
   border-bottom: 1px solid #585858;
   margin-bottom: 1.25rem;
